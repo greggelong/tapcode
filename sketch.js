@@ -99,13 +99,14 @@ function keyReleased(){
 }
 
 function mouseReleased(){
-  if(mouseY>height/2 === "n"){
+  print("hello mouse")
+  if(mouseY>height/2){
   wrd++
   wrd=wrd%textarr.length
   makeCode(textarr[wrd])
   indx=0;  // set blinking index to zero
   }
-  if(mouseY<height/2== "a"){
+  if(mouseY<height/2){
     // toggle answer
      if (showAn == true){
       showAn = false;
