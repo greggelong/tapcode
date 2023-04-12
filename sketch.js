@@ -98,6 +98,25 @@ function keyReleased(){
   return false; // prevent any default behavior
 }
 
+function mouseReleased(){
+  if(mouseY>height/2 === "n"){
+  wrd++
+  wrd=wrd%textarr.length
+  makeCode(textarr[wrd])
+  indx=0;  // set blinking index to zero
+  }
+  if(mouseY<height/2== "a"){
+    // toggle answer
+     if (showAn == true){
+      showAn = false;
+     }else{
+      showAn = true;
+     }
+    
+  }
+   
+}
+
 function makeCode(instring) {
   code = "S00"; // long on means start of word
   sp = "0000";
