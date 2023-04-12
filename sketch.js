@@ -30,7 +30,7 @@ let letters = {
   y: 54,
   z: 55,
 };
-let txt = "greg red piano club teach duck phone taxi plane boat pig why tennis team swim fly hope life robot pay one tour" // dont overwrite the p5 text with an variable
+let txt = "greg red piano club teach phone taxi plane boat pig why tennis team swim fly hope life robot pay one tour" // dont overwrite the p5 text with an variable
 let textarr= txt.split(" ")
 let wrd =0;
 let cnv
