@@ -30,10 +30,11 @@ let letters = {
   y: 54,
   z: 55,
 };
-let text = "greg is a robot"
-let textarr= text.split(" ")
+let txt = "greg is a robot" // dont overwrite the p5 text with an variable
+let textarr= txt.split(" ")
 let wrd =0;
 let cnv
+let showAn = false;
 function setup() {
   cnv =createCanvas(600, 600);
   cnv.parent("sketch-holder");
@@ -46,10 +47,19 @@ function setup() {
   //code = g+space;
   makeCode(textarr[wrd]);
   print(code);
+
 }
 
 function draw() {
   background(0);
+  if (showAn === true){
+    textSize(36);
+    noStroke();
+    fill(255,0,0);
+    text(textarr[wrd],20,36)
+    stroke(0,255,0)
+
+  }
   if (code[indx] === "0") {
     fill(0);
   } else if (code[indx] === "1") {
@@ -70,10 +80,21 @@ function draw() {
 }
 
 function keyReleased(){
+  if(key === "n"){
   wrd++
   wrd=wrd%textarr.length
   makeCode(textarr[wrd])
   indx=0;  // set blinking index to zero
+  }
+  if(key == "a"){
+    // toggle answer
+     if (showAn == true){
+      showAn = false;
+     }else{
+      showAn = true;
+     }
+    
+  }
 
 }
 
